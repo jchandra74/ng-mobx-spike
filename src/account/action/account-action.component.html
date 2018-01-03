@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+    Account Manager
+</mat-toolbar>
+
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Account 123 4567</mat-card-title>
+        <mat-card-subtitle>BSB 400290</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-form-field>
+            <input matInput type="number" placeholder="Amount" class="text-right" [(ngModel)]="amount">
+            <span matPrefix>$&nbsp;</span>
+            <span matSuffix>.00</span>
+        </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+            <button mat-button (click)="account.deposit(amount)">Deposit</button>
+            <button mat-button (click)="account.withdraw(amount)">Withdraw</button>
+    </mat-card-actions>
+</mat-card>
