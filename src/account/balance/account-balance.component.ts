@@ -10,4 +10,8 @@ export class AccountBalanceComponent {
     constructor(
         public account: AccountService
     ) { }
+
+    count() {
+        console.count('Change detected');
+    }
 }
